@@ -1,0 +1,1 @@
+retrofit requires android 2.3 minimum

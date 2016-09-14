@@ -1,0 +1,4 @@
+adb shell am broadcast -a android.intent.action.BOOT_COMPLETED -p com.rendall.martyn.lightup
+
+
+com.rendall.martyn.lightup.broadcast.ACTION_RECEIVE_GEOFENCE

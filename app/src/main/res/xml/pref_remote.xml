@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_remote_category_title"
+        android:key="pref_remote_settings">
+
+        <CheckBoxPreference
+            android:key="pref_auto_lights_on_enabled"
+            android:summary="@string/auto_lights_on_enabled_summary"
+            android:title="@string/auto_lights_on_title"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+            android:key="pref_remote_enabled"
+            android:summary="@string/remote_enabled_summary"
+            android:title="@string/remote_enabled_title"
+            android:defaultValue="true"/>
+
+        <SwitchPreference
+            android:key="pref_sunset_or_fixed"
+            android:summary="@string/sunset_or_fixed_summary"
+            android:title="@string/sunset_or_fixed_title"
+            android:defaultValue="true"/>
+
+        <com.rendall.martyn.lightup.fragments.NumberPickerPreference
+            android:key="pref_remote_start_time"
+            android:summary="@string/remote_start_time_buffer_summary"
+            android:title="@string/remote_start_time_buffer_title"
+            android:dependency="pref_sunset_or_fixed"
+            android:disableDependentsState="true"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
